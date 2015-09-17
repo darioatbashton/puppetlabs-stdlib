@@ -27,7 +27,7 @@ module Puppet::Parser::Functions
 
     case args[0]
       when 'encode'
-        result = Base64.encode64(args[1])
+        result = Base64.strict_encode64(args[1])
       when 'decode'
         result = Base64.decode64(args[1])
     end
